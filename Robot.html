@@ -1,0 +1,71 @@
+<!Doctype html>
+  <html>
+  <head>
+  <style>
+  #input{
+    padding:15px;
+    border:3px solid;
+    border-radius:10px;
+  }
+  .btn{
+    padding:12px;
+    box-shadow: 0 0 18px black;
+    border-radius:20px;
+    
+  }
+  .btn:hover{
+    color:white;
+    background-color:black;
+  }
+   #result{
+     box-shadow: 0 0 18px black;
+     width:280px;
+     text-align:center;
+    }
+      
+ 
+  </style>
+  <script>
+    function answer() {
+            var userInput = document.getElementById("input").value.toLowerCase();
+            var resultElement = document.getElementById("result");
+
+            if (userInput.includes("hi") || userInput.includes("salut")) {
+                    resultElement.innerHTML = "Hi my friend let's chatt";
+            } else if ( userInput.includes("how") || userInput.includes("are")){
+             
+                resultElement.innerHTML = "I am fine, then i'm gonna ask you questions and respond ,right?";
+            }
+      else if ( userInput.includes("yes") || userInput.includes("yh")){
+             
+                resultElement.innerHTML = "Which country do you live in?";
+      }
+  
+      else if ( userInput.includes("no") || userInput.includes("np")){
+             
+                resultElement.innerHTML = "No !! why no okey bye ,I can not speak to you again!";
+            }
+      else if ( userInput.includes("kigali") || userInput.includes("rwanda")){
+             
+                resultElement.innerHTML = "Rwanda,Kigali wow you live with who?";
+            }
+            else{
+               resultElement.innerHTML = "<h1>"+"Icyongereza gike"+"</h1>"+"I am sorry but...,Parfait gave me few words in Ai generating words dictionary, Could you use different words";
+           
+            }
+        }
+  
+   </script>
+  </head>
+<body>
+  <h1>I am bot made by parfait do you want to chatt with me.</h1>
+  <div>Drop your message here<br></div>
+  <div class="display" >
+  <input type="text" id="input">
+  <button onclick="answer()" class="btn">Send</button>
+  </div>
+  <p></p>
+  <p id="result">
+  </p>
+</body>
+  </html>
